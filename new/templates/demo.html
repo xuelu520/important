@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>
+        思源系统
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+   <style>
+
+    body {
+      overflow-y: scroll;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ant-layout {
+      padding-bottom:0 !important;
+    }
+
+    .login-form {
+      margin: 0 auto;
+      max-width: 300px;
+      margin-top:60px;
+    }
+
+    .login-form-forgot {
+      float: right;
+    }
+
+    .login-form-button {
+      width: 100%;
+    }
+
+   </style>
+
+  <script>
+    if(window.location.search.indexOf("web_ci") > 0){
+      document.write('<script type="text/javascript" src="/js/checkAuth.js"><\/script>');
+    }
+  </script>
+  <script>
+  if(window.location.search.indexOf("web_ci") > 0){
+    document.write('<script type="text/javascript" src="./webpack.assets.js?v='+Math.random()+'"><\/script>');
+   }else{
+   	document.write('<script type="text/javascript" src="/webpack.assets.js?v='+Math.random()+'"><\/script>');
+   }
+  </script>
+
+  <script>
+      document.write('<link href="' + window.WEBPACK_ASSETS.app.css + '" rel="stylesheet" media="screen" />');
+  </script>
+
+
+</head>
+
+<body style="background:#eceffa;">
+    <div class="container">
+        <div id="main">
+        </div>
+    </div>
+    <script>
+    	if(window.location.search.indexOf("web_ci") > 0){
+    		document.write('<script src="./statics/xlsx.full.min.js" type="text/javascript" charset="utf-8"><\/script>');
+			document.write('<script src="./statics/FileSaver.js" type="text/javascript" charset="utf-8"><\/script>');
+			document.write('<script src="./statics/Blob.js" type="text/javascript" charset="utf-8"><\/script>');
+    	}else{
+    		document.write('<script src="/statics/xlsx.full.min.js" type="text/javascript" charset="utf-8"><\/script>');
+			document.write('<script src="/statics/FileSaver.js" type="text/javascript" charset="utf-8"><\/script>');
+			document.write('<script src="/statics/Blob.js" type="text/javascript" charset="utf-8"><\/script>');
+    	}
+    </script>
+    <script>
+      window.userInfo = {"msg":"","data":{"auth":"1,2,3,4","name":"齐洪","userName":"bjqihong"},"status":true};
+    </script>
+
+    <script>
+    document.write('<script type="text/javascript" src="' + window.WEBPACK_ASSETS.vendor.js + '"><\/script>');
+    </script>
+    <script>
+    document.write('<script type="text/javascript" src="' + window.WEBPACK_ASSETS.app.js + '"><\/script>');
+    </script>
+
+</body>
+
+</html>

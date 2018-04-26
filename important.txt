@@ -1,0 +1,119 @@
+ombo
+## 前端方案之 —webpack + npm包管理 
+## 前端方案之 — 第三方UIKit
+- bootstrap (基于jquery 插件)
+		- admindesigns  (基于jquery 插件)
+			- 案例
+					- [http://console.hyphenate.io]
+							- [http://newbigdata.easemob.com/]
+							- SmartAdmin (基于jquery 插件)
+			- 案例
+					- [[http://console.easemob.io]
+					- react-bootstrap
+					- antDesign
+					- imiao (基于react)
+		- material-ui 
+		- eleme (基于vue) 
+		- muse-ui(基于vue)
+## 前端方案之 — 数据处理
+		- websql 
+		- indexeddb 【有demo】
+		- jsondb(sql) 
+		- TaffyDB(json)
+			- demo: [http://www.gbtags.com/technology/democenter/20120925-javascript-database-taffydb/]
+			- 服务器推送事件SSE（Server-sent Events）
+				- demo 【有demo】
+				- mock数据
+				- json扁平化处理
+				- 缓存http://taffydb.com/
+					- 自带的缓存机制 
+						- 硬编码的缓存机制 
+							- dns-prefetch  DNS缓存 
+								- 参数缓存 
+									- 数据累加排重算法 
+## 接口规范
+## 前端方案之 — 移动端
+## 前端方案之 — 动态路由
+									- 按需加载 — [https://segmentfault.com/a/1190000007949841] 【完成－－有demo】
+## 前端方案之 — 跨域
+									- jsonp + token 
+									- cors + token 【有demo】
+## 首屏同构直出SSR ( Server Side Render) 
+## 前端方案之 —渐进式网页应用 PWA (Progressive Web Apps)
+## 汉字转拼音 【有demo】
+## 前端方案之 — 微信小程序
+## 前端方案之 — 转战vue 及其生态 
+									- vue 
+									- vue-ssr 
+									- vue-router 
+									- vue-router 动态路由切害 
+									- webpack 
+									- fetch
+									- vue-uikit调研 
+									- week
+									- week 消息推送
+									- http://ks.netease.com/blog?id=8668 — demo
+## 前端方案之 — 图片识别
+## 参考文献
+
+									短链接 demo
+									QQ—微信—微博 —手机号 登录验证 demo
+									例会推荐 react-router 4 使用分享，复杂的 (我的恶梦)
+		GOCR.js 图片识别
+		JqueryFaceDetection.js与Tracking.js 人脸识别
+		Knwl.js 自言语言处理
+		natural node 自言语言处理
+		Julius JS – 最流行的网页语音识别库
+		Artyom.js 语音识别
+		[https://zhuanlan.zhihu.com/p/28382713?utm\_source=itdadao&utm\_medium=referral] 语音识别
+
+
+		365500
+
+
+		[youyongba@aliyun.com]
+
+		学习react native 踩的坑
+		[http://www.jianshu.com/p/56fc26452625]
+
+
+# 脚手架使用总结反馈
+## 一些疑问
+		1. 自己封装的xhr 可以不可以es7-fetch代替
+			 - 比如验证码可以直接通过fetch来获取，而不需要做很多地方进行配置
+			 1. 可能习惯问题，感觉配置地方多
+			 1. require引用地址方式
+			 1. eslint 考虑是否有必要用 它只是语法错误，逻辑错误它检测不到
+			 1. express 非前后端分离，是否有必要用。 webpack好像提供了一个http服务
+			 1. redux的action和redux reducer 目录结构是否独立出来
+			 1. 是否有必要采用动态路由切割
+			 1. react-router v4 【重点】
+##  好的
+			 1. 别名 
+			 1. 类里面的函数直接用箭头函数 避免了调用时用bind传递this
+
+
+
+
+			 - 备份电脑上的代码 【完成】
+			 	- host  【完成】
+					- apache conf 【完成】
+						- 工作笔记 【完成】
+							- 学习笔记 【完成】
+								- newportal  【完成】
+									- newbigdata 【完成】
+										- token 【完成】
+											- reactdemo 【完成】
+												- react_ssr  demo 【完成】 
+													- pinyin demo 【完成】
+														- SSE demo 【完成】
+															- 微信小程序demo 【完成】
+															- 升级电脑系统
+															- 按装Android模拟器
+															- 按装ios模拟器
+															- react-native demo
+															- react-native 消息推送demo
+															- QQ—微信—微博 —手机号 登录验证 demo
+															- 短链接 demo
+															- 例会推荐 react-router 4 使用分享，复杂的 (我的恶梦)
+

@@ -1,0 +1,218 @@
+##
+# Host Database
+## localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+#127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost 
+
+#127.0.0.1 img1sw.baidu.com
+10.211.55.4 xxx.cdn.cn
+#10.211.55.4 dpassets.easemob.com
+
+127.0.0.1 xxx.cdn.cn
+
+#127.0.0.1 g.alicdn.com
+
+
+#不需更改
+0.0.0.1 www.xmind.net
+
+#编辑考核二期
+127.0.0.1 fe.editor.dc.netease.com
+
+
+
+#reactdemo1
+
+127.0.0.1 reactdemo.netease.com
+
+
+#渠道三期
+#127.0.0.1 channelmonitor.netease.com
+127.0.0.1 channelmonitor.netease.com
+
+#html 静态文件
+127.0.0.1 html.netease.com
+
+127.0.0.1 static.netease.com
+
+#用户分析系统
+127.0.0.1 usertracking.newease.com
+123.58.179.98 buzz098x.hz.youdao.com
+
+#渠道测试环境
+123.58.179.98 buzz098x.hz.youdao.com
+
+# bigdata项目
+127.0.0.1 bigdata.ws.netease.com
+#10.234.145.49 test.bigdata.ws.netease.com
+223.252.220.99 test.bigdata.ws.netease.com
+#223.252.220.99 test.bigdata.ws.netease.com
+#127.0.0.1 test.bigdata.ws.netease.com
+
+# portal项目
+#127.0.0.1 portal.netease.com
+127.0.0.1 portal_color.netease.com
+
+# 新portal demo
+127.0.0.1 assets.netease.com
+127.0.0.1 backups.netease.com
+
+
+# new fe plan
+127.0.0.1 dev.netease.com
+
+
+# new fe plan
+127.0.0.1 lake.fe.netease.com
+
+
+
+
+123.58.179.98 buzz098x.hz.youdao.com
+
+##
+# 大数数-- 社交大数据平台 
+##
+
+# 国内的前端静态服务器
+# 本地机器
+#127.0.0.1 dpassets.easemob.com
+# 测试机（沙箱）
+#120.26.2.13 dpassets.easemob.com
+# 虚拟机
+#10.211.55.4 dpassets.easemob.com
+#
+# 海外的前端静态服务器
+# 本地机器
+ 127.0.0.1 dpassets.hyphenate.io
+# 测试机（沙箱）
+# 120.26.2.13 dpassets.hyphenate.io
+# 虚拟机
+# 10.211.55.4 dpassets.hyphenate.io
+# 
+
+
+#支付页面
+#127.0.0.1 console_test.easemob.com
+#127.0.0.1 console_test.easemob.com
+127.0.0.1 console.sandbox.easemob.com
+127.0.0.1 aws.console.easemob.com
+
+#社交大数据后端hosts
+#120.26.2.13 d.easemob.com
+#127.0.0.1 d.easemob.com
+
+#配色系统
+127.0.0.1 setcolor.easemob.com
+
+#127.0.0.1   g.tbcdn.cn
+
+#前端react 测试hosts
+
+127.0.0.1 react.easemob.com
+
+# sandbox @hangzhou 
+# 测试服务器
+120.26.2.13  	sdb-ali-hangzhou-dp1 
+# 内网
+# 10.252.211.39 	sdb-ali-hangzhou-dp1 
+# 外网
+# 120.26.3.238	sdb-ali-hangzhou-dp2 
+# 内网
+# 10.252.217.144	sdb-ali-hangzhou-dp2
+# aws外网地址
+52.9.202.102	pro4-aws-ca-dpweb
+
+
+##
+# admindesign 模板地址
+##
+127.0.0.1 admindesigns.netease.com
+##
+# newbigdata 新大数据页面
+##
+127.0.0.1 newbigdata.easemob.com
+
+
+
+# 测试combo
+# 	本机虚拟机
+10.211.55.4      assets2.easemob.com
+# 	测试环境
+#120.26.2.13      dpassets.easemob.com
+#	测试环境这个默认关闭
+#120.26.2.13 	 dpassets1.easemob.com
+
+
+#127.0.0.1 tb1.bdstatic.com
+
+
+
+#indexeddb demo
+127.0.0.1 indexeddb.netease.com
+
+#indexeddb+sse demo
+127.0.0.1 sse.netease.com
+
+
+#phpmyadmin
+127.0.0.1 phpmyadmin.netease.com
+
+
+#拼音搜索demo
+127.0.0.1 pinyin.netease.com
+
+
+#模拟数据demo
+127.0.0.1 mockdemo.netease.com
+
+
+# 测试机
+127.0.0.1 flatten.netease.com
+
+127.0.0.1 routecb.netease.com
+
+
+# 练习测试机
+
+127.0.0.1 test.easemob.com
+# newlake
+127.0.0.1 newportal.netease.com
+
+10.211.55.4 static.dexphp.loc
+
+
+
+127.0.0.1	activate.adobe.com
+127.0.0.1	practivate.adobe.com
+127.0.0.1	ereg.adobe.com
+127.0.0.1	wip3.adobe.com
+127.0.0.1	activate.wip3.adobe.com
+127.0.0.1	3dns-3.adobe.com
+127.0.0.1	3dns-2.adobe.com
+127.0.0.1	adobe-dns.adobe.com
+127.0.0.1	adobe-dns-2.adobe.com
+127.0.0.1	adobe-dns-3.adobe.com
+127.0.0.1	ereg.wip3.adobe.com
+127.0.0.1	activate-sea.adobe.com
+127.0.0.1	wwis-dubc1-vip60.adobe.com
+127.0.0.1	activate-sjc0.adobe.com
+127.0.0.1	hl2rcv.adobe.com
+#127.0.0.1	lm.licenses.adobe.com
+127.0.0.1	na2m-pr.licenses.adobe.com
+
+127.0.0.1	ims-na1-prprod.adobelogin.com
+
+127.0.0.1	na4r.services.adobe.com
+
+127.0.0.1	na1r.services.adobe.com
+127.0.0.1     activate.adobe.com
+127.0.0.1     practivate.adobe.com
+127.0.0.1     lm.licenses.adobe.com
+127.0.0.1     lmlicenses.wip4.adobe.com
+127.0.0.1     hlrcv.stage.adobe.com
+127.0.0.1     na1r.services.adobe.com
+127.0.0.1 windows10.microdone.cn

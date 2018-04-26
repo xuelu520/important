@@ -1,0 +1,15 @@
+.loginPasswordRow{
+    position: relative !important;
+}
+.loginPasswordRow button{
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+}
+.downloadModel{
+    color: #fff;
+}
+.channelCostButtonArea{
+    display:flex;
+    justify-content: space-between;
+}

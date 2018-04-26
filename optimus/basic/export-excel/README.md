@@ -1,0 +1,86 @@
+# 导出Excel（2007以上版本↑）
+
+#### 1、引入需要的lib文件
+* 1、[xlsx.full.min.js](https://github.com/SheetJS/js-xlsx);
+* 2、[Blob.js](https://github.com/eligrey/Blob.js);
+* 3、[FileSaver.js](https://github.com/eligrey/FileSaver.js);
+
+```html
+<script type="text/javascript" src="./js/xlsx.full.min.js"></script>
+<script type="text/javascript" src="./js/Blob.js"></script>
+<script type="text/javascript" src="./js/FileSaver.js"></script>
+```
+
+#### 2、基本方法
+```javascript
+// parse data，改变数据格式
+function sheet_from_array_of_arrays(data, opts) {
+	var ws = {};
+	var range = {s: {c:10000000, r:10000000}, e: {c:0, r:0 }};
+	for(var R = 0; R != data.length; ++R) {
+		for(var C = 0; C != data[R].length; ++C) {
+			if(range.s.r > R) range.s.r = R;
+			if(range.s.c > C) range.s.c = C;
+			if(range.e.r < R) range.e.r = R;
+			if(range.e.c < C) range.e.c = C;
+			var cell = {v: data[R][C] };
+			if(cell.v == null) continue;
+			var cell_ref = XLSX.utils.encode_cell({c:C,r:R});
+			if(typeof cell.v === 'number') cell.t = 'n';
+			else if(typeof cell.v === 'boolean') cell.t = 'b';
+			else cell.t = 's';
+			ws[cell_ref] = cell;
+		}
+	}
+	if(range.s.c < 10000000) ws['!ref'] = XLSX.utils.encode_range(range);
+	return ws;
+}
+
+function Workbook() {
+	if(!(this instanceof Workbook)) return new Workbook();
+	this.SheetNames = [];
+	this.Sheets = {};
+}
+
+// 校验sheetName的重复性
+var allSheetNames = [];
+var checkSheetName = function(name){
+	if(!name) name = "new";
+	if(allSheetNames.indexOf(name) == -1){
+		allSheetNames.push(name);
+		return name;
+	}else{
+		return checkSheetName(name += "_new");
+	}
+}
+
+function s2ab(s) {
+	var buf = new ArrayBuffer(s.length);
+	var view = new Uint8Array(buf);
+	for (var i=0; i!=s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+	return buf;
+}
+```
+
+#### 3、数据调用
+```javascript
+// 导出数据格式为数组元素为数据;eg:[[], [], []];
+// wb.SheetNames 为 Array，存放sheet数据; eg:["sheet1", "sheet2"];
+// wb.Sheets 为JSON，存放以sheetName和data为键值对的数据; eg:
+/*
+ * {
+ * 		"sheet1": xxx,// xxx is sheet_from_array_of_arrays(data)
+ * 		"sheet2": xxx
+ * }
+ */
+var data = [[1,2,3],[true, false, "sheetjs"],["foo","bar","0.3"], ["baz", null, "qux"]];
+var wb = new Workbook();
+var ws_name = "SheetJS";// sheet name
+var wb_name = "test.xlsx";// Excel name
+var ws = sheet_from_array_of_arrays(data);// Excel data
+var ws_name = checkSheetName(ws_name);
+wb.SheetNames.push(ws_name);
+wb.Sheets[ws_name] = ws;
+var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), wb_name);
+```

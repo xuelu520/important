@@ -1,0 +1,44 @@
+.globalMask{
+  position:absolute;
+  left:0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index:10010;
+  background-color: rgba(184, 185, 192, 0.9);
+}
+
+.maskInner{
+  position: relative;
+  z-index:10011;
+  top: 50%;
+  margin: -30px auto;
+  width: 300px;
+  border-radius: 3px;
+  color: #0d71e2;
+  height: 80px;
+  background-color: white;
+  text-align: center;
+}
+
+.maskInner div{
+  position: relative;
+  width: 141px;
+  margin: 0 auto;
+}
+
+.loadingImg{
+  width: 48px;
+  height: 48px;
+  background: url('../../assets/img/common/loading.gif') no-repeat;
+  margin-top: 15px;
+  display: block;
+  float: left;
+}
+
+.loadingText{
+  font-size: 16px;
+  display: block;
+  margin-top: 30px;
+  float: left;
+}
